@@ -4,11 +4,12 @@ import { StyleSheet, Text, View,TextInput, Button,Image, } from 'react-native';
 import { ScreenContainer } from 'react-native-screens';
 import Icon from "../assets/images/preview.png";
 import FlatButton from './FlatButton';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-const Stack = createNativeStackNavigator();
-class Login extends React.Component{
-    render(){
+import { useNavigation } from '@react-navigation/native';
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+// const Stack = createNativeStackNavigator();
+export default Login  = ()=> {
+  const navigation = useNavigation ();
         return(
           <View style={styles.container}>
             <View style = {styles.header}>
@@ -22,28 +23,28 @@ class Login extends React.Component{
             <View style={styles.body}>
               <TextInput style={styles.email_textinput} placeholder="Email Address"/>
               <TextInput style={styles.password_textinput}placeholder="Password"/>
-              <FlatButton style = {styles.signup_button} text="Sign In" />
+              <FlatButton style = {styles.signup_button} text="Sign In" onPress={()=>navigation.navigate("Search")} />
             </View>
             <View style={styles.footer}>
               <Text>You don't have an account ?</Text>
               <View >
-                <Button title="Sign Up" onPress={()=>alert("Vous avez cliqué")}/>
+                <Button title="Sign Up" onPress={()=>navigation.navigate("SignUp")}/>
               </View>
             </View>
             <StatusBar style="auto" />
           </View>
         );
     }
-}
-export const Signin = ({navigation})=>{
-  return(
-    <ScreenContainer>
-      <Text>Signin Screen</Text>
-      <Button title="Sign In" onPress={()=>alert("Vous avez cliqué")} />
-      <Button title="Create Account" onPress={()=>navigation.push} />
-    </ScreenContainer>
-  );
-};
+
+// export const Signin = ({navigation})=>{
+//   return(
+//     <ScreenContainer>
+//       <Text>Signin Screen</Text>
+//       <Button title="Sign In" onPress={()=>alert("Vous avez cliqué")} />
+//       <Button title="Create Account" onPress={()=>navigation.push} />
+//     </ScreenContainer>
+//   );
+// };
 
 
 const styles = StyleSheet.create({
@@ -105,4 +106,3 @@ const styles = StyleSheet.create({
 
 
 
-export default Login

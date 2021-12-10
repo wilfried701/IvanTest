@@ -7,8 +7,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
 
-class SignUp extends React.Component{
-    render(){
+export default SignUp = ({navigation}) => {
         return(
           <View style={styles.container}>
             <View style = {styles.header}>
@@ -36,7 +35,7 @@ class SignUp extends React.Component{
           </View>
         );
     }
-}
+
 
 
 const styles = StyleSheet.create({
@@ -117,4 +116,3 @@ const styles = StyleSheet.create({
 
 
 
-export default SignUp

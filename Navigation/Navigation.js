@@ -7,74 +7,74 @@ import Login from '../Components/Login';
 import SignUp from '../Components/SignUp';
 import FlatButton from '../Components/FlatButton';
 
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Button
-        title="Go to Profile"
-        onPress={() => navigation.navigate('Profile')}
-      />
-    </View>
-  );
-}
+// function HomeScreen({ navigation }) {
+//   return (
+//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+//       <Button
+//         title="Go to Profile"
+//         onPress={() => navigation.navigate('Profile')}
+//       />
+//     </View>
+//   );
+// }
 
-function ProfileScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Button
-        title="Go to Notifications"
-        onPress={() => navigation.navigate('Notifications')}
-      />
-      <Button title="Go back" onPress={() => navigation.goBack()} />
-    </View>
-  );
-}
+// function ProfileScreen({ navigation }) {
+//   return (
+//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+//       <Button
+//         title="Go to Notifications"
+//         onPress={() => navigation.navigate('Notifications')}
+//       />
+//       <Button title="Go back" onPress={() => navigation.goBack()} />
+//     </View>
+//   );
+// }
 
-function NotificationsScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Button
-        title="Go to Settings"
-        onPress={() => navigation.navigate('Settings')}
-      />
-      <Button title="Go back" onPress={() => navigation.goBack()} />
-    </View>
-  );
-}
+// function NotificationsScreen({ navigation }) {
+//   return (
+//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+//       <Button
+//         title="Go to Settings"
+//         onPress={() => navigation.navigate('Settings')}
+//       />
+//       <Button title="Go back" onPress={() => navigation.goBack()} />
+//     </View>
+//   );
+// }
 
-function SettingsScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Button title="Go back" onPress={() => navigation.goBack()} />
-    </View>
-  );
-}
-function Loginn({ navigation }) {
-    return (
-        <View style={styles.container}>
-        <View style = {styles.header}>
-          <View style = {styles.icon_container}>
-            <Image source={Icon} style={styles.icon}/>
-          </View>
-          <Text style = {styles.header_text}>Hello Again!</Text>
-          <Text style = {styles.header_text}>Welcome</Text>
-          <Text style = {styles.header_text}>Back</Text>
-        </View>
-        <View style={styles.body}>
-          <TextInput style={styles.email_textinput} placeholder="Email Address"/>
-          <TextInput style={styles.password_textinput}placeholder="Password"/>
-          <FlatButton style = {styles.signup_button} text="Sign In" />
-        </View>
-        <View style={styles.footer}>
-          <Text>You don't have an account ?</Text>
-          <View >
-            <Button title="Sign Up" onPress={() => navigation.navigate("SignUp")}/>
-          </View>
-        </View>
-        <StatusBar style="auto" />
-      </View>
-    );
-  }
+// function SettingsScreen({ navigation }) {
+//   return (
+//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+//       <Button title="Go back" onPress={() => navigation.goBack()} />
+//     </View>
+//   );
+// }
+// function Loginn({ navigation }) {
+//     return (
+//         <View style={styles.container}>
+//         <View style = {styles.header}>
+//           <View style = {styles.icon_container}>
+//             <Image source={Icon} style={styles.icon}/>
+//           </View>
+//           <Text style = {styles.header_text}>Hello Again!</Text>
+//           <Text style = {styles.header_text}>Welcome</Text>
+//           <Text style = {styles.header_text}>Back</Text>
+//         </View>
+//         <View style={styles.body}>
+//           <TextInput style={styles.email_textinput} placeholder="Email Address"/>
+//           <TextInput style={styles.password_textinput}placeholder="Password"/>
+//           <FlatButton style = {styles.signup_button} text="Sign In" />
+//         </View>
+//         <View style={styles.footer}>
+//           <Text>You don't have an account ?</Text>
+//           <View >
+//             <Button title="Sign Up" onPress={() => navigation.navigate("SignUp")}/>
+//           </View>
+//         </View>
+//         <StatusBar style="auto" />
+//       </View>
+//     );
+//   }
 
 
 
@@ -86,7 +86,7 @@ function MyStack() {
       <Stack.Screen name="LogIn" component={Login} />
       <Stack.Screen name="SignUp" component={SignUp} />
       <Stack.Screen name="Search" component={Search} />
-      <Stack.Screen name="Settings" component={SettingsScreen} />
+      {/* <Stack.Screen name="Settings" component={SettingsScreen} /> */}
     </Stack.Navigator>
   );
 }
